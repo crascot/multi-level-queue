@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Многоуровневая очередь</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h1>Многоуровневая очередь</h1>
+
+    <form id="task-form">
+        <input type="text" id="task-name" placeholder="Название задачи" required>
+        <input type="number" id="task-time" placeholder="Время выполнения (в секундах)" min="1" required>
+        <select id="task-priority">
+            <option value="high">Высокий приоритет (Round Robin)</option>
+            <option value="low">Низкий приоритет (FCFS)</option>
+        </select>
+        <button type="submit">Добавить задачу</button>
+    </form>
+
+    <button id="start-queue">Запустить выполнение задач</button>
+
+    <div class="log" id="log"></div>
+
+    <script src="queue.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

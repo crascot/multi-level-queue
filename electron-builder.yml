@@ -1,0 +1,42 @@
+appId: com.example.multi-level-queue
+productName: MultiLevelQueue
+copyright: "© 2024 Crascot"
+directories:
+  output: build
+  buildResources: assets
+
+files:
+  - "dist/**/*"
+  - "!node_modules/**/test/**"
+  - "main.js"
+  - "package.json"
+
+# extraResources:
+#   - from: ./resources/
+#     to: ./resources/
+
+win:
+  target:
+    - nsis
+  icon: ./dist/assets/logo-256x256.ico
+  artifactName: "${productName}-Setup-${version}.exe"
+  # certificateFile: "path/to/your/certificate.pfx"
+  # certificatePassword: "your_certificate_password"
+
+nsis:
+  oneClick: false
+  perMachine: true
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: "Multi Level Queue"
+
+mac:
+  target: dmg
+  icon: ./dist/assets/logo-512x512.ico
+
+linux:
+  target:
+    - AppImage
+  category: Utility

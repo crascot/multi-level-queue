@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+input, select, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+.log {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    /* max-height: 300px; */
+    overflow-y: auto;
+    margin-top: 20px;
+}
+.log p {
+    margin: 5px 0;
+}
